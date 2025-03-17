@@ -21,7 +21,7 @@ DST_DIR := .
 PROTOVALIDATE_DIR := ../protovalidate/proto/protovalidate
 
 build:
-	protoc -I=/usr/local/include -I=$(PROTOVALIDATE_DIR) -I=$(SRC_DIR) --go_out=$(DST_DIR) --go_opt=paths=source_relative --go-grpc_out=$(DST_DIR) --go-grpc_opt=paths=source_relative $(SRC_DIR)/types/v1/*.proto
-	protoc -I=/usr/local/include -I=$(PROTOVALIDATE_DIR) -I=$(SRC_DIR) --go_out=$(DST_DIR) --go_opt=paths=source_relative --go-grpc_out=$(DST_DIR) --go-grpc_opt=paths=source_relative $(SRC_DIR)/api/v1/*.proto
-	protoc -I=/usr/local/include -I=$(PROTOVALIDATE_DIR) -I=$(SRC_DIR) --go_out=$(DST_DIR) --go_opt=paths=source_relative --go-grpc_out=$(DST_DIR) --go-grpc_opt=paths=source_relative $(SRC_DIR)/service/v1/push/service.proto
+	protoc -I=$(PROTOVALIDATE_DIR) -I=$(SRC_DIR) --go_out=$(DST_DIR) --go_opt=paths=source_relative --go-grpc_out=$(DST_DIR) --go-grpc_opt=paths=source_relative $(SRC_DIR)/types/v1/*.proto
+	protoc -I=$(PROTOVALIDATE_DIR) -I=$(SRC_DIR) --go_out=$(DST_DIR) --go_opt=paths=source_relative --go-grpc_out=$(DST_DIR) --go-grpc_opt=paths=source_relative $(SRC_DIR)/api/v1/*.proto
+	protoc -I=$(PROTOVALIDATE_DIR) -I=$(SRC_DIR) --go_out=$(DST_DIR) --go_opt=paths=source_relative --go-grpc_out=$(DST_DIR) --go-grpc_opt=paths=source_relative $(SRC_DIR)/service/v1/push/service.proto
 
